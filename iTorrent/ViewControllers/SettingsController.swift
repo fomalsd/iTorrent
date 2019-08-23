@@ -23,7 +23,6 @@ class SettingsController: ThemedUITableViewController {
 	@IBOutlet weak var badgeSwitch: UISwitch!
 	@IBOutlet weak var updateLabel: UILabel!
 	@IBOutlet weak var updateLoading: UIActivityIndicatorView!
-	@IBOutlet weak var adsSwitch: UISwitch!
 	
 	var downloadLimitPicker: SpeedLimitPickerView!
 	var uploadLimitPicker: SpeedLimitPickerView!
@@ -79,7 +78,6 @@ class SettingsController: ThemedUITableViewController {
 		}
 		
 		let disabledAds = UserDefaults.standard.bool(forKey: UserDefaultsKeys.disableAds)
-		adsSwitch.setOn(disabledAds, animated: false)
 		
 		checkUpdates()
     }

@@ -9,8 +9,6 @@
 import UIKit
 import UserNotifications
 
-import Firebase
-import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -22,10 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 		defaultUserDefaultsSettings()
-		
-		FirebaseApp.configure()
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-		
+				
         Manager.InitManager()
         
         if let splitViewController = window?.rootViewController as? UISplitViewController {
